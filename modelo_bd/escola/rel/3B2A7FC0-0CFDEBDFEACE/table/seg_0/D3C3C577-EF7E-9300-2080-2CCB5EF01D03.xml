@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D3C3C577-EF7E-9300-2080-2CCB5EF01D03" name="Matricula">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 03:56:23 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<ordsAlias>table_12</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="numero" id="1B73FC38-DB80-C72E-DFAB-380FDEF0FCEC">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 03:57:00 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5B4173EF-8E87-DD35-4131-3C9E2BC93631" name="Matricula_PK">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 03:57:00 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1B73FC38-DB80-C72E-DFAB-380FDEF0FCEC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

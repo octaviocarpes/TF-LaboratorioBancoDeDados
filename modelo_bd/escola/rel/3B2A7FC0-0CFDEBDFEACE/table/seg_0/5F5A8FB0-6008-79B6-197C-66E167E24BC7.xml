@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5F5A8FB0-6008-79B6-197C-66E167E24BC7" name="Curso">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 03:49:04 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="5B52F9E3-A80A-562A-E7A6-CAA3AB1816D9">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 03:49:46 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome" id="D33E5A72-A3A9-14A6-2B4E-019416A5BF5A">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 03:49:46 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0C4C541D-7716-12B0-D8CE-6CFC643306AE" name="Curso_PK">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 03:49:59 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5B52F9E3-A80A-562A-E7A6-CAA3AB1816D9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

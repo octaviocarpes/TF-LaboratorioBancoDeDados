@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C64A8722-2CC6-1B06-B8E8-5245334EACBA" name="Disciplina_Professor">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 04:18:09 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<ordsAlias>table_18</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Disciplina_id" id="9FA47989-6245-293C-4972-A78902F324E4">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 04:18:29 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6A782F21-4516-C3F8-0EF0-4E66C485D4A6" referredColumn="B13ECCAC-012A-9C66-0154-0E2C9E7DF951"/>
+</associations>
+</Column>
+<Column name="Professor_Matricula_numero" id="A7DBF6E4-1525-31D5-9DA7-6587B10FE3E6">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 04:18:33 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="348E4A69-A315-F779-EC03-20CA289E5DA6" referredColumn="8C7B80FA-0F1C-13C6-7ABC-5AFB61B44A80"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="43C54735-71C4-A946-5D03-370E6D291E88" name="Disciplina_Professor_PK">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 04:18:42 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9FA47989-6245-293C-4972-A78902F324E4"/>
+<colUsage columnID="A7DBF6E4-1525-31D5-9DA7-6587B10FE3E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A51620B4-C459-ABD2-3181-775EC6CE7836" name="DP_Disciplina_FK">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 04:18:29 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9FA47989-6245-293C-4972-A78902F324E4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="054E3968-BBC2-582F-8D15-CD63A4F86CC4" name="DP_Professor_FK">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 04:18:33 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7DBF6E4-1525-31D5-9DA7-6587B10FE3E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

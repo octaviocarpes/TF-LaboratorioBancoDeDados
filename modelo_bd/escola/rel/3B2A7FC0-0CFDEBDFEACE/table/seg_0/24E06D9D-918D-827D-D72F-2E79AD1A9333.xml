@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="24E06D9D-918D-827D-D72F-2E79AD1A9333" name="Semestre_Turma">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 05:04:37 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<ordsAlias>table_32</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Semestre_id" id="0A544864-8E03-DCF4-2233-D44C27E6A799">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 05:04:50 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="01F2F9E0-1322-0D8D-D2DA-BFABC46D7A84" referredColumn="E149E85E-1BF0-4FB4-614D-EE4A2A9D215E"/>
+</associations>
+</Column>
+<Column name="Turma_id" id="4C2A872E-028F-F738-20CB-14981647679B">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 05:04:57 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="294C24C5-ECFD-D22C-5A7B-C4595232538B" referredColumn="36283BC1-FD2C-E0A1-4AF0-7D16C2CE7805"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A34B2943-D94C-447D-24BF-075B531CFF80" name="Semestre_Turma_PK">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 05:05:07 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0A544864-8E03-DCF4-2233-D44C27E6A799"/>
+<colUsage columnID="4C2A872E-028F-F738-20CB-14981647679B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6B5F3596-8B50-F5E5-9294-CBEC5FA99022" name="ST_Semestre_FK">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 05:04:50 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0A544864-8E03-DCF4-2233-D44C27E6A799"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CAF1C45C-772D-B701-D607-0C4872DCEDAC" name="ST_Turma_FK">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 05:04:57 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C2A872E-028F-F738-20CB-14981647679B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

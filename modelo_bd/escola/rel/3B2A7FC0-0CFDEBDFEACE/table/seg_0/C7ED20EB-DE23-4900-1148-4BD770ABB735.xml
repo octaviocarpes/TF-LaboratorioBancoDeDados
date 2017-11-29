@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C7ED20EB-DE23-4900-1148-4BD770ABB735" name="Aluno">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 03:41:40 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Matricula_numero" id="6B56B1ED-1426-813B-C7D1-4596AB2371A5">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 04:00:00 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1F400B39-6606-792A-E6CD-144033FADCAD" referredColumn="1B73FC38-DB80-C72E-DFAB-380FDEF0FCEC"/>
+</associations>
+</Column>
+<Column name="nome" id="C1304ADC-754F-93AE-0D36-C4526651FE6A">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 03:48:32 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Curso_id" id="B17871EF-C6C8-4DF8-77FC-1C4994ADBD11">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 04:19:19 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="565DF7F8-3243-4299-CA80-D41A71E814B9" referredColumn="5B52F9E3-A80A-562A-E7A6-CAA3AB1816D9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5953E78D-196E-5BB8-20B9-3AF507F8679D" name="Aluno_PK">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 03:48:32 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B56B1ED-1426-813B-C7D1-4596AB2371A5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="34871AED-79B0-FD5E-0E68-BB35C07B80DA" name="Aluno_Matricula_FK">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 04:00:00 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B56B1ED-1426-813B-C7D1-4596AB2371A5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3958756A-F8AC-7A2D-30CE-A34787D5DBB7" name="Aluno_Curso_FK">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 04:19:19 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B17871EF-C6C8-4DF8-77FC-1C4994ADBD11"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

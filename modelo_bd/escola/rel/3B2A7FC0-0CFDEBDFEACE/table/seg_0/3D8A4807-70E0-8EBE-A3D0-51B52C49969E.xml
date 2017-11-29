@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3D8A4807-70E0-8EBE-A3D0-51B52C49969E" name="Professor">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 03:55:05 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<ordsAlias>table_11</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Matricula_numero" id="8C7B80FA-0F1C-13C6-7ABC-5AFB61B44A80">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 04:01:10 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F111FF2C-0B3D-01DD-3B67-C5AA3CF7299B" referredColumn="1B73FC38-DB80-C72E-DFAB-380FDEF0FCEC"/>
+</associations>
+</Column>
+<Column name="nome" id="D061BC37-BC89-7E1F-1713-3A14F220231A">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 03:55:53 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6443E1DE-485F-1478-FD58-5E926A3DF7C8" name="Professor_PK">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 03:55:38 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8C7B80FA-0F1C-13C6-7ABC-5AFB61B44A80"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="641E9400-AA89-8B81-19A6-1488D520B785" name="Professor_Matricula_FK">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 04:01:10 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8C7B80FA-0F1C-13C6-7ABC-5AFB61B44A80"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

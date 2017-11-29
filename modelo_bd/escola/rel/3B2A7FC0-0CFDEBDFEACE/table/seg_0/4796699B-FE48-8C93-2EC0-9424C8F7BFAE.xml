@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4796699B-FE48-8C93-2EC0-9424C8F7BFAE" name="Semestre_Disciplina">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 05:01:55 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<ordsAlias>table_31</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Semestre_id" id="D7A3DD3A-F976-80A6-B433-5EE3E0D75058">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 05:02:09 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="76EBC81A-B4B2-FC89-C62E-D22A47428179" referredColumn="E149E85E-1BF0-4FB4-614D-EE4A2A9D215E"/>
+</associations>
+</Column>
+<Column name="Disciplina_id" id="1104ED95-D66E-CB0A-BAE2-94C29EC2572A">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 05:02:16 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="255C9F59-0620-E42E-FE3A-E8CE94F14F03" referredColumn="B13ECCAC-012A-9C66-0154-0E2C9E7DF951"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6D5BA870-D238-F703-4E9B-751B00FCCCFE" name="Semestre_Disciplina_PK">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 05:05:24 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D7A3DD3A-F976-80A6-B433-5EE3E0D75058"/>
+<colUsage columnID="1104ED95-D66E-CB0A-BAE2-94C29EC2572A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="967EE853-EB13-536D-8A52-676EDF0EC801" name="SD_Semestre_FK">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 05:02:09 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D7A3DD3A-F976-80A6-B433-5EE3E0D75058"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4A7E6F87-03E0-C853-E23F-681BB90BC374" name="SD_Disciplina_FK">
+<createdBy>caleb</createdBy>
+<createdTime>2017-11-29 05:02:16 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1104ED95-D66E-CB0A-BAE2-94C29EC2572A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

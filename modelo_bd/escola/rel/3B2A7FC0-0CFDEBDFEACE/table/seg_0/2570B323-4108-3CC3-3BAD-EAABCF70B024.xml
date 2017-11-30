@@ -46,6 +46,24 @@
 <colAssociation fkAssociation="D1F966A5-684F-55A0-2673-3C03A303F2B1" referredColumn="6B56B1ED-1426-813B-C7D1-4596AB2371A5"/>
 </associations>
 </Column>
+<Column name="atual" id="A2093BFB-1910-013C-1DA0-6CC1C4AC5B34">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 16:46:15 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<constraintName>ck_semestre_atual</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<usesDefaultValue>true</usesDefaultValue>
+<listOfValues>
+<valueDef value="0" description="FALSE"/>
+<valueDef value="1" description="TRUE"/>
+</listOfValues>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="1079C759-3D34-68DD-AE62-BE1E88EDA1A3" name="Semestre_PK">
@@ -58,6 +76,16 @@
 <indexColumnUsage>
 <colUsage columnID="E149E85E-1BF0-4FB4-614D-EE4A2A9D215E"/>
 </indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AE9DF23F-E686-3B9D-9541-BFFCC7CFF7BE" name="Semestre__IDX_ativo">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 17:02:25 UTC</createdTime>
+<comment>Previne que haja mais de um semestre ativo por aluno</comment>
+<ownerDesignName>escola</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<indexExpression>CASE WHEN atual = &apos;1&apos; THEN id || Aluno_Matricula_numero ELSE NULL END</indexExpression>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
 </ind_PK_UK>
 <ind_PK_UK id="55A03F2D-D886-91A3-57A8-89877503E9CE" name="Semestre_Aluno_FK">
 <createdBy>caleb</createdBy>

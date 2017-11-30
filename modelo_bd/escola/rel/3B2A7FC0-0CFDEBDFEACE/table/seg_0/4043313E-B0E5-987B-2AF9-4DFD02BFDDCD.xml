@@ -63,5 +63,15 @@
 <colUsage columnID="B13ECCAC-012A-9C66-0154-0E2C9E7DF951"/>
 </indexColumnUsage>
 </ind_PK_UK>
+<ind_PK_UK id="67E17A29-C4B3-03A1-E4DE-059DC6D3578D" name="Disciplina__UN">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 16:40:26 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A443387E-5A6C-5494-7ADE-B9D4851C6CCC"/>
+</indexColumnUsage>
+</ind_PK_UK>
 </indexes>
 </Table>

@@ -31,6 +31,20 @@
 <ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="Escola_id" id="AC290872-4FF3-103E-FE54-1F600AFCA9F1">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 17:34:41 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5B0F0E18-5034-685A-5658-611A4AEAC555" referredColumn="93F6ECE6-7096-D0D0-9DC4-CB0243443F1F"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="0C4C541D-7716-12B0-D8CE-6CFC643306AE" name="Curso_PK">
@@ -42,6 +56,26 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="5B52F9E3-A80A-562A-E7A6-CAA3AB1816D9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D5EDCFFD-F9B9-0F33-CAAF-A0C4D8E164E0" name="Curso__UN">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 16:40:31 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D33E5A72-A3A9-14A6-2B4E-019416A5BF5A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F18E68C2-1052-2D7F-C02B-3C1B943306BA" name="Curso_Escola_FK">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 17:34:41 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AC290872-4FF3-103E-FE54-1F600AFCA9F1"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

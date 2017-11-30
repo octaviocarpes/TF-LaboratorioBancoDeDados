@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BDE03CAD-F0FE-89E0-1822-1D775A56F5DB" name="Estado">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 16:25:18 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<ordsAlias>table_15</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="uf" id="693A0BC5-5FF5-39E6-25A0-93BAAE3CA595">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 16:25:43 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome" id="421705FB-EA64-66EC-34CC-FC7353D6FFE1">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 16:27:28 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2E053F68-2B31-6147-C74F-0E91C33E3BBD" name="Estado_PK">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 16:25:43 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="693A0BC5-5FF5-39E6-25A0-93BAAE3CA595"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="79390451-EEC6-362E-7290-FDAE3F25C880" name="Estado__UN">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 16:30:27 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="421705FB-EA64-66EC-34CC-FC7353D6FFE1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

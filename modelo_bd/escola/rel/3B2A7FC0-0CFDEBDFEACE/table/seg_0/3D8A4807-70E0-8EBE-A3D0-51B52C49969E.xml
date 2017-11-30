@@ -33,6 +33,72 @@
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="genero" id="88451C9A-D383-9E5B-0D4A-59CCB4E453D1">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 15:49:09 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<constraintName>ck_professor_genero</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<usesDefaultValue>true</usesDefaultValue>
+<listOfValues>
+<valueDef value="F" description="Feminino"/>
+<valueDef value="M" description="Masculino"/>
+</listOfValues>
+<defaultValue>M</defaultValue>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_nasc" id="69B48FC7-9337-6106-2014-2DB82EA970A2">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 16:24:28 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="endereco" id="46D9C024-7DDB-5CAE-E54E-D994FF9AB943">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 16:24:51 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cidade_id" id="5A07D266-7CED-799E-2C8D-9246429D1C2E">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 16:34:15 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7090D8A9-F895-4474-7E8B-C95B121AC538" referredColumn="A706BBB5-3205-87F0-6877-E53BE14CD23B"/>
+</associations>
+</Column>
+<Column name="email" id="DF061B84-1BA0-A2D4-5104-AFE634F74ACC">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 16:38:27 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="6443E1DE-485F-1478-FD58-5E926A3DF7C8" name="Professor_PK">
@@ -46,6 +112,16 @@
 <colUsage columnID="8C7B80FA-0F1C-13C6-7ABC-5AFB61B44A80"/>
 </indexColumnUsage>
 </ind_PK_UK>
+<ind_PK_UK id="564A9750-D062-4D26-E609-29977FE2C01E" name="Professor__UN">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 16:38:42 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DF061B84-1BA0-A2D4-5104-AFE634F74ACC"/>
+</indexColumnUsage>
+</ind_PK_UK>
 <ind_PK_UK id="641E9400-AA89-8B81-19A6-1488D520B785" name="Professor_Matricula_FK">
 <createdBy>caleb</createdBy>
 <createdTime>2017-11-29 04:01:10 UTC</createdTime>
@@ -54,6 +130,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="8C7B80FA-0F1C-13C6-7ABC-5AFB61B44A80"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E75C2334-A630-D7CE-88A8-6A79BF384598" name="Professor_Cidade_FK">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 16:34:15 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5A07D266-7CED-799E-2C8D-9246429D1C2E"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

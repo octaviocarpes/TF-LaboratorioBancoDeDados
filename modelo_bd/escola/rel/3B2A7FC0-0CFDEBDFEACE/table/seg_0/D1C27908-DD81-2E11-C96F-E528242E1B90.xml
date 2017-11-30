@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D1C27908-DD81-2E11-C96F-E528242E1B90" name="Escola">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 17:31:25 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<ordsAlias>table_19</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="93F6ECE6-7096-D0D0-9DC4-CB0243443F1F">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 17:31:43 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome" id="B3B00CBF-2147-1CB3-0284-C7B5C17C965C">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 17:32:18 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="endereco" id="1BED9A2F-55B0-5595-C989-1DC674A5DDF7">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 17:33:34 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cidade_id" id="79948B05-2C31-3F77-0501-CAA59D417FF9">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 17:36:03 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BCDE9DA2-6141-B706-26C7-AD74A4DD0525" referredColumn="A706BBB5-3205-87F0-6877-E53BE14CD23B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D2BFDA44-0DDB-4704-9AB2-B0C4D9874D4B" name="Escola_PK">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 17:32:07 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="93F6ECE6-7096-D0D0-9DC4-CB0243443F1F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5346ADF3-26D2-9C83-4FAB-8DE3CCD2A4F7" name="Escola_Cidade_FK">
+<createdBy>calebe</createdBy>
+<createdTime>2017-11-30 17:36:03 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="79948B05-2C31-3F77-0501-CAA59D417FF9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

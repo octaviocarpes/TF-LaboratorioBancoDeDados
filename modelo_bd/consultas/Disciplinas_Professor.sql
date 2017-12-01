@@ -1,4 +1,4 @@
-SELECT d.nome, d.creditos, d.carga_horaria, p.nome
+SELECT d.nome, d.creditos, d.carga_horaria, p.nome as professor
 FROM Disciplina
 INNER JOIN Disciplina_Professor dp ON d.id = dp.Disciplina_id
 INNER JOIN Professor p ON dp.Professor_Matricula_Numero = p.Matricula_numero

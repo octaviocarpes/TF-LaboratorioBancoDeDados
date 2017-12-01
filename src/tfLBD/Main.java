@@ -15,9 +15,21 @@ public class Main {
 			Scanner sc = new Scanner(System.in);
 			option = sc.nextInt();
 			switch(option){
-			case 1:
-				minhaconexao.selectJoinQuestao1();
-				break;
+
+				case 1:
+					minhaconexao.selectJoinQuestao1();
+					break;
+				case 2:
+					minhaconexao.select_Alunos_Disciplina();
+					break;
+				case 3:
+					minhaconexao.select_Alunos_SemestreAtural();
+				case 4:
+					minhaconexao.select_Alunos_Turma();
+
+				default: trigger  = false;
+
+
 			}
 		}
 		

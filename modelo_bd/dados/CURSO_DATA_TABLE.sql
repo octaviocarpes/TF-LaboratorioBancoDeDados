@@ -1,0 +1,23 @@
+REM INSERTING into BH103436.CURSO
+SET DEFINE OFF;
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('1','Administração','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('2','Arquitetura','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('3','Biomedicina','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('4','Ciência da Computação','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('5','Ciências Aeronáuticas','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('6','Ciências Contábeis','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('7','Direito','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('8','Enfermagem','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('9','Engenharia Civil','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('10','Engenharia de Computação','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('11','Engenharia de Produção','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('12','Engenharia de Software','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('13','Engenharia Elétrica','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('14','Engenharia Mecânica','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('15','Engenharia Química','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('16','Farmácia','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('17','Filosofia','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('18','História','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('19','Medicina','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('20','Odontologia','1');
+Insert into BH103436.CURSO (ID,NOME,ESCOLA_ID) values ('21','Psicologia','1');

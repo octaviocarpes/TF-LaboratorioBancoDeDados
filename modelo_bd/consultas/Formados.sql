@@ -1,4 +1,4 @@
-SELECT m.numero, a.nome, a.genero, a.data_nasc, a.email, a.endereco, c.nome, e.nome, cs.nome, s.periodo as Ultimo_Semestre
+SELECT m.numero as matricula, a.nome, a.genero, a.data_nasc, a.email, a.endereco, c.nome as cidade, e.nome as estado, cs.nome as curso, s.periodo as Ultimo_Semestre
 FROM Aluno a
 INNER JOIN Matricula m ON a.Matricula_numero = m.numero
 INNER JOIN Cidade c ON a.Cidade_id = c.id

@@ -64,6 +64,22 @@
 <ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="trancado" id="291C0640-6E17-3C57-3882-6D3F0200BCC1">
+<createdBy>caleb</createdBy>
+<createdTime>2017-12-01 03:45:55 UTC</createdTime>
+<ownerDesignName>escola</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<usesDefaultValue>true</usesDefaultValue>
+<listOfValues>
+<valueDef value="0" description="FALSE"/>
+<valueDef value="1" description="TRUE"/>
+</listOfValues>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="1079C759-3D34-68DD-AE62-BE1E88EDA1A3" name="Semestre_PK">

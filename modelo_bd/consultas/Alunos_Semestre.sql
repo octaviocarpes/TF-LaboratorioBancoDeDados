@@ -1,4 +1,4 @@
-SELECT m.numero, a.nome, a.genero, a.data_nasc, a.email, a.endereco, c.nome, e.nome, cs.nome
+SELECT m.numero, a.nome, a.genero, a.data_nasc, a.email, a.endereco, c.nome, e.nome, cs.nome, s.trancado
 FROM Aluno a
 INNER JOIN Matricula m ON a.Matricula_numero = m.numero
 INNER JOIN Cidade c ON a.Cidade_id = c.id

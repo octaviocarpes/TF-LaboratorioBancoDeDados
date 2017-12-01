@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="DBBED665-D83C-DC61-6A30-0BE4B108BDD2" containerWithKeyObject="DEE50634-8F4D-8221-55E8-64AC9F8C1674" localFKIndex="4C00AAB1-3948-6BE6-7057-2E6F28279925" name="Curriculo_Curso_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="567DC91C-5514-069C-8B97-397EDF2304F7" containerWithKeyObject="60ADA9F6-304D-A18B-FF53-DDFBC5457FDA" localFKIndex="D613ACA5-E1A5-9C4C-CE01-98B25387C1DE" name="Curso_Disciplina_Curso_FK">
 <createdBy>caleb</createdBy>
-<createdTime>2017-11-29 04:26:54 UTC</createdTime>
+<createdTime>2017-12-01 03:10:56 UTC</createdTime>
 <ownerDesignName>escola</ownerDesignName>
 <referredTableLongName>Curso</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>

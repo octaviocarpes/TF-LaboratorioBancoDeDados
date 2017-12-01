@@ -19,6 +19,7 @@
 <autoIncrementColumn>true</autoIncrementColumn>
 <identityColumn>true</identityColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Escola_id</notNullConstraintName>
 </Column>
 <Column name="nome" id="B3B00CBF-2147-1CB3-0284-C7B5C17C965C">
 <createdBy>calebe</createdBy>
@@ -30,6 +31,7 @@
 <dataTypeSize>200</dataTypeSize>
 <ownDataTypeParameters>200,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Escola_nome</notNullConstraintName>
 </Column>
 <Column name="endereco" id="1BED9A2F-55B0-5595-C989-1DC674A5DDF7">
 <createdBy>calebe</createdBy>
@@ -53,6 +55,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Escola_Cidade_id</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="BCDE9DA2-6141-B706-26C7-AD74A4DD0525" referredColumn="A706BBB5-3205-87F0-6877-E53BE14CD23B"/>
 </associations>

@@ -8,18 +8,6 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id" id="36283BC1-FD2C-E0A1-4AF0-7D16C2CE7805">
-<createdBy>caleb</createdBy>
-<createdTime>2017-11-29 03:52:40 UTC</createdTime>
-<ownerDesignName>escola</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementColumn>true</autoIncrementColumn>
-<identityColumn>true</identityColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="numero" id="AED4C9EC-8D64-FFAE-9558-12945C7690D9">
 <createdBy>caleb</createdBy>
 <createdTime>2017-11-29 03:53:41 UTC</createdTime>
@@ -38,16 +26,6 @@
 <ownerDesignName>escola</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="36283BC1-FD2C-E0A1-4AF0-7D16C2CE7805"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="EADE271F-0EF7-F461-FD85-0620D3AEBA93" name="Turma__UN">
-<createdBy>calebe</createdBy>
-<createdTime>2017-11-30 16:40:16 UTC</createdTime>
-<ownerDesignName>escola</ownerDesignName>
-<indexState>Unique Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="AED4C9EC-8D64-FFAE-9558-12945C7690D9"/>

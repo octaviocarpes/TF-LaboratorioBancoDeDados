@@ -22,9 +22,9 @@
 <colAssociation fkAssociation="E3919A7D-8118-01F0-30C1-2EACCF205117" referredColumn="B13ECCAC-012A-9C66-0154-0E2C9E7DF951"/>
 </associations>
 </Column>
-<Column name="Turma_id" id="DB55E675-AE99-C3B1-8D7A-41DB04325D3F">
+<Column name="Turma_numero" id="ADFC62BF-CC8F-0B82-42ED-4AF82909F39A">
 <createdBy>caleb</createdBy>
-<createdTime>2017-11-29 04:16:57 UTC</createdTime>
+<createdTime>2017-12-01 03:17:29 UTC</createdTime>
 <ownerDesignName>escola</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -33,7 +33,7 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="F136A761-20A3-5116-5A2B-7B0247A3A8D1" referredColumn="36283BC1-FD2C-E0A1-4AF0-7D16C2CE7805"/>
+<colAssociation fkAssociation="F136A761-20A3-5116-5A2B-7B0247A3A8D1" referredColumn="AED4C9EC-8D64-FFAE-9558-12945C7690D9"/>
 </associations>
 </Column>
 </columns>
@@ -47,7 +47,7 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="A8B6B0FB-A694-2FB4-3895-464B41BF8C38"/>
-<colUsage columnID="DB55E675-AE99-C3B1-8D7A-41DB04325D3F"/>
+<colUsage columnID="ADFC62BF-CC8F-0B82-42ED-4AF82909F39A"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="ACB2B22F-0B84-F2C5-83AD-8600BBAD8752" name="DT_Disciplina_FK">
@@ -67,7 +67,7 @@
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="DB55E675-AE99-C3B1-8D7A-41DB04325D3F"/>
+<colUsage columnID="ADFC62BF-CC8F-0B82-42ED-4AF82909F39A"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

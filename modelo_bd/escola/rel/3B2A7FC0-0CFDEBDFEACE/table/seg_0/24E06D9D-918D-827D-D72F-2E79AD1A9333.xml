@@ -22,9 +22,9 @@
 <colAssociation fkAssociation="01F2F9E0-1322-0D8D-D2DA-BFABC46D7A84" referredColumn="E149E85E-1BF0-4FB4-614D-EE4A2A9D215E"/>
 </associations>
 </Column>
-<Column name="Turma_id" id="4C2A872E-028F-F738-20CB-14981647679B">
+<Column name="Turma_numero" id="A9D893C4-DF62-8CC4-1545-3104BA28CE89">
 <createdBy>caleb</createdBy>
-<createdTime>2017-11-29 05:04:57 UTC</createdTime>
+<createdTime>2017-12-01 03:17:29 UTC</createdTime>
 <ownerDesignName>escola</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -33,7 +33,7 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="294C24C5-ECFD-D22C-5A7B-C4595232538B" referredColumn="36283BC1-FD2C-E0A1-4AF0-7D16C2CE7805"/>
+<colAssociation fkAssociation="294C24C5-ECFD-D22C-5A7B-C4595232538B" referredColumn="AED4C9EC-8D64-FFAE-9558-12945C7690D9"/>
 </associations>
 </Column>
 </columns>
@@ -47,7 +47,7 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="0A544864-8E03-DCF4-2233-D44C27E6A799"/>
-<colUsage columnID="4C2A872E-028F-F738-20CB-14981647679B"/>
+<colUsage columnID="A9D893C4-DF62-8CC4-1545-3104BA28CE89"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="6B5F3596-8B50-F5E5-9294-CBEC5FA99022" name="ST_Semestre_FK">
@@ -67,7 +67,7 @@
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="4C2A872E-028F-F738-20CB-14981647679B"/>
+<colUsage columnID="A9D893C4-DF62-8CC4-1545-3104BA28CE89"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

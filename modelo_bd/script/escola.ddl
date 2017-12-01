@@ -1,5 +1,5 @@
 -- Gerado por Oracle SQL Developer Data Modeler 17.3.0.261.1529
---   em:        2017-11-30 15:41:05 BRST
+--   em:        2017-12-01 02:04:04 BRST
 --   site:      Oracle Database 11g
 --   tipo:      Oracle Database 11g
 
@@ -26,6 +26,26 @@ ALTER TABLE aluno ADD CONSTRAINT aluno_pk PRIMARY KEY ( matricula_numero );
 
 ALTER TABLE aluno ADD CONSTRAINT aluno__un UNIQUE ( email );
 
+CREATE TABLE avaliacao (
+    id              NUMBER NOT NULL,
+    tipo            CHAR(1) DEFAULT 'P' NOT NULL,
+    disciplina_id   NUMBER NOT NULL,
+    semestre_id     NUMBER NOT NULL,
+    nome            VARCHAR2(100 CHAR) NOT NULL,
+    nota            NUMBER DEFAULT 0 NOT NULL
+);
+
+ALTER TABLE avaliacao
+    ADD CONSTRAINT cx_avaliacao_tipo CHECK ( tipo IN (
+        'P',
+        'T'
+    ) );
+
+ALTER TABLE avaliacao
+    ADD CONSTRAINT cx_avaliacao_nota CHECK ( nota BETWEEN 0 AND 10 );
+
+ALTER TABLE avaliacao ADD CONSTRAINT avaliacao_pk PRIMARY KEY ( id );
+
 CREATE TABLE cidade (
     id          NUMBER NOT NULL,
     nome        VARCHAR2(100) NOT NULL,
@@ -33,22 +53,6 @@ CREATE TABLE cidade (
 );
 
 ALTER TABLE cidade ADD CONSTRAINT cidade_pk PRIMARY KEY ( id );
-
-CREATE TABLE curriculo (
-    id         NUMBER NOT NULL,
-    curso_id   NUMBER NOT NULL
-);
-
-ALTER TABLE curriculo ADD CONSTRAINT curriculo_pk PRIMARY KEY ( id );
-
-CREATE TABLE curriculo_disciplina (
-    curriculo_id    NUMBER NOT NULL,
-    disciplina_id   NUMBER NOT NULL,
-    nivel           NUMBER NOT NULL
-);
-
-ALTER TABLE curriculo_disciplina ADD CONSTRAINT curriculo_disciplina_pk PRIMARY KEY ( curriculo_id,
-disciplina_id );
 
 CREATE TABLE curso (
     id          NUMBER NOT NULL,
@@ -59,6 +63,15 @@ CREATE TABLE curso (
 ALTER TABLE curso ADD CONSTRAINT curso_pk PRIMARY KEY ( id );
 
 ALTER TABLE curso ADD CONSTRAINT curso__un UNIQUE ( nome );
+
+CREATE TABLE curso_disciplina (
+    nivel           NUMBER NOT NULL,
+    disciplina_id   NUMBER NOT NULL,
+    curso_id        NUMBER NOT NULL
+);
+
+ALTER TABLE curso_disciplina ADD CONSTRAINT curso_disciplina_pk PRIMARY KEY ( disciplina_id,
+curso_id );
 
 CREATE TABLE disciplina (
     id              NUMBER NOT NULL,
@@ -81,17 +94,20 @@ professor_matricula_numero );
 
 CREATE TABLE disciplina_turma (
     disciplina_id   NUMBER NOT NULL,
-    turma_id        NUMBER NOT NULL
+    turma_numero    NUMBER NOT NULL
 );
 
 ALTER TABLE disciplina_turma ADD CONSTRAINT disciplina_turma_pk PRIMARY KEY ( disciplina_id,
-turma_id );
+turma_numero );
 
 CREATE TABLE escola (
-    id          NUMBER NOT NULL,
-    nome        VARCHAR2(200) NOT NULL,
+    id          NUMBER
+        CONSTRAINT nnc_escola_id NOT NULL,
+    nome        VARCHAR2(200)
+        CONSTRAINT nnc_escola_nome NOT NULL,
     endereco    VARCHAR2(250),
-    cidade_id   NUMBER NOT NULL
+    cidade_id   NUMBER
+        CONSTRAINT nnc_escola_cidade_id NOT NULL
 );
 
 ALTER TABLE escola ADD CONSTRAINT escola_pk PRIMARY KEY ( id );
@@ -135,7 +151,8 @@ CREATE TABLE semestre (
     id                       NUMBER NOT NULL,
     periodo                  CHAR(6 CHAR) NOT NULL,
     aluno_matricula_numero   NUMBER NOT NULL,
-    atual                    CHAR(1) DEFAULT '1' NOT NULL
+    atual                    CHAR(1) DEFAULT '1' NOT NULL,
+    trancado                 NUMBER DEFAULT 0 NOT NULL
 );
 
 ALTER TABLE semestre
@@ -143,6 +160,13 @@ ALTER TABLE semestre
         '0',
         '1'
     ) );
+
+ALTER TABLE semestre
+    ADD CHECK ( trancado IN (
+        0,
+        1
+    ) );
+--  Previne que haja mais de um semestre ativo por aluno
 
 CREATE UNIQUE INDEX semestre__idx_ativo ON
     semestre (
@@ -155,30 +179,19 @@ CREATE UNIQUE INDEX semestre__idx_ativo ON
 
 ALTER TABLE semestre ADD CONSTRAINT semestre_pk PRIMARY KEY ( id );
 
-CREATE TABLE semestre_disciplina (
-    semestre_id     NUMBER NOT NULL,
-    disciplina_id   NUMBER NOT NULL
-);
-
-ALTER TABLE semestre_disciplina ADD CONSTRAINT semestre_disciplina_pk PRIMARY KEY ( semestre_id,
-disciplina_id );
-
 CREATE TABLE semestre_turma (
-    semestre_id   NUMBER NOT NULL,
-    turma_id      NUMBER NOT NULL
+    semestre_id    NUMBER NOT NULL,
+    turma_numero   NUMBER NOT NULL
 );
 
 ALTER TABLE semestre_turma ADD CONSTRAINT semestre_turma_pk PRIMARY KEY ( semestre_id,
-turma_id );
+turma_numero );
 
 CREATE TABLE turma (
-    id       NUMBER NOT NULL,
     numero   NUMBER NOT NULL
 );
 
-ALTER TABLE turma ADD CONSTRAINT turma_pk PRIMARY KEY ( id );
-
-ALTER TABLE turma ADD CONSTRAINT turma__un UNIQUE ( numero );
+ALTER TABLE turma ADD CONSTRAINT turma_pk PRIMARY KEY ( numero );
 
 ALTER TABLE aluno
     ADD CONSTRAINT aluno_cidade_fk FOREIGN KEY ( cidade_id )
@@ -192,21 +205,25 @@ ALTER TABLE aluno
     ADD CONSTRAINT aluno_matricula_fk FOREIGN KEY ( matricula_numero )
         REFERENCES matricula ( numero );
 
-ALTER TABLE curriculo_disciplina
-    ADD CONSTRAINT cd_curriculo_fk FOREIGN KEY ( curriculo_id )
-        REFERENCES curriculo ( id );
-
-ALTER TABLE curriculo_disciplina
-    ADD CONSTRAINT cd_disciplina_fk FOREIGN KEY ( disciplina_id )
+ALTER TABLE avaliacao
+    ADD CONSTRAINT avaliacao_disciplina_fk FOREIGN KEY ( disciplina_id )
         REFERENCES disciplina ( id );
+
+ALTER TABLE avaliacao
+    ADD CONSTRAINT avaliacao_semestre_fk FOREIGN KEY ( semestre_id )
+        REFERENCES semestre ( id );
 
 ALTER TABLE cidade
     ADD CONSTRAINT cidade_estado_fk FOREIGN KEY ( estado_uf )
         REFERENCES estado ( uf );
 
-ALTER TABLE curriculo
-    ADD CONSTRAINT curriculo_curso_fk FOREIGN KEY ( curso_id )
+ALTER TABLE curso_disciplina
+    ADD CONSTRAINT curso_disciplina_curso_fk FOREIGN KEY ( curso_id )
         REFERENCES curso ( id );
+
+ALTER TABLE curso_disciplina
+    ADD CONSTRAINT curso_disciplina_disciplina_fk FOREIGN KEY ( disciplina_id )
+        REFERENCES disciplina ( id );
 
 ALTER TABLE curso
     ADD CONSTRAINT curso_escola_fk FOREIGN KEY ( escola_id )
@@ -225,8 +242,8 @@ ALTER TABLE disciplina_turma
         REFERENCES disciplina ( id );
 
 ALTER TABLE disciplina_turma
-    ADD CONSTRAINT dt_turma_fk FOREIGN KEY ( turma_id )
-        REFERENCES turma ( id );
+    ADD CONSTRAINT dt_turma_fk FOREIGN KEY ( turma_numero )
+        REFERENCES turma ( numero );
 
 ALTER TABLE escola
     ADD CONSTRAINT escola_cidade_fk FOREIGN KEY ( cidade_id )
@@ -240,14 +257,6 @@ ALTER TABLE professor
     ADD CONSTRAINT professor_matricula_fk FOREIGN KEY ( matricula_numero )
         REFERENCES matricula ( numero );
 
-ALTER TABLE semestre_disciplina
-    ADD CONSTRAINT sd_disciplina_fk FOREIGN KEY ( disciplina_id )
-        REFERENCES disciplina ( id );
-
-ALTER TABLE semestre_disciplina
-    ADD CONSTRAINT sd_semestre_fk FOREIGN KEY ( semestre_id )
-        REFERENCES semestre ( id );
-
 ALTER TABLE semestre
     ADD CONSTRAINT semestre_aluno_fk FOREIGN KEY ( aluno_matricula_numero )
         REFERENCES aluno ( matricula_numero );
@@ -257,8 +266,19 @@ ALTER TABLE semestre_turma
         REFERENCES semestre ( id );
 
 ALTER TABLE semestre_turma
-    ADD CONSTRAINT st_turma_fk FOREIGN KEY ( turma_id )
-        REFERENCES turma ( id );
+    ADD CONSTRAINT st_turma_fk FOREIGN KEY ( turma_numero )
+        REFERENCES turma ( numero );
+
+CREATE SEQUENCE avaliacao_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER avaliacao_id_trg BEFORE
+    INSERT ON avaliacao
+    FOR EACH ROW
+    WHEN ( new.id IS NULL )
+BEGIN
+    :new.id := avaliacao_id_seq.nextval;
+END;
+/
 
 CREATE SEQUENCE cidade_id_seq START WITH 1 NOCACHE ORDER;
 
@@ -268,17 +288,6 @@ CREATE OR REPLACE TRIGGER cidade_id_trg BEFORE
     WHEN ( new.id IS NULL )
 BEGIN
     :new.id := cidade_id_seq.nextval;
-END;
-/
-
-CREATE SEQUENCE curriculo_id_seq START WITH 1 NOCACHE ORDER;
-
-CREATE OR REPLACE TRIGGER curriculo_id_trg BEFORE
-    INSERT ON curriculo
-    FOR EACH ROW
-    WHEN ( new.id IS NULL )
-BEGIN
-    :new.id := curriculo_id_seq.nextval;
 END;
 /
 
@@ -337,22 +346,11 @@ BEGIN
 END;
 /
 
-CREATE SEQUENCE turma_id_seq START WITH 1 NOCACHE ORDER;
-
-CREATE OR REPLACE TRIGGER turma_id_trg BEFORE
-    INSERT ON turma
-    FOR EACH ROW
-    WHEN ( new.id IS NULL )
-BEGIN
-    :new.id := turma_id_seq.nextval;
-END;
-/
 
 
-
--- Relatório do Resumo do Oracle SQL Developer Data Modeler: 
+-- RelatÃ³rio do Resumo do Oracle SQL Developer Data Modeler: 
 -- 
--- CREATE TABLE                            16
+-- CREATE TABLE                            15
 -- CREATE INDEX                             1
 -- ALTER TABLE                             45
 -- CREATE VIEW                              0
@@ -361,7 +359,7 @@ END;
 -- CREATE PACKAGE BODY                      0
 -- CREATE PROCEDURE                         0
 -- CREATE FUNCTION                          0
--- CREATE TRIGGER                           8
+-- CREATE TRIGGER                           7
 -- ALTER TRIGGER                            0
 -- CREATE COLLECTION TYPE                   0
 -- CREATE STRUCTURED TYPE                   0
@@ -374,7 +372,7 @@ END;
 -- CREATE DISK GROUP                        0
 -- CREATE ROLE                              0
 -- CREATE ROLLBACK SEGMENT                  0
--- CREATE SEQUENCE                          8
+-- CREATE SEQUENCE                          7
 -- CREATE MATERIALIZED VIEW                 0
 -- CREATE SYNONYM                           0
 -- CREATE TABLESPACE                        0
